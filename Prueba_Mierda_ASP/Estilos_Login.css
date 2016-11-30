@@ -1,0 +1,11 @@
+﻿body {
+
+}
+.imagen_login {
+    background-image: url('logoMarillac.png');
+    background-repeat:no-repeat;
+}
+
+.Elementos_Login{
+    font-family:Arial
+}
