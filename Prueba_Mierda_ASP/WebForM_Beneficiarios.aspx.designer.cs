@@ -10,7 +10,7 @@
 namespace Prueba_Mierda_ASP {
     
     
-    public partial class WebForm1 {
+    public partial class WebForM_Beneficiarios {
         
         /// <summary>
         /// form1 control.
@@ -22,15 +22,6 @@ namespace Prueba_Mierda_ASP {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Image1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
-        
-        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -40,22 +31,13 @@ namespace Prueba_Mierda_ASP {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// TextBox1 control.
+        /// TextBox_2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
-        
-        /// <summary>
-        /// TextBox2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox TextBox_2;
         
         /// <summary>
         /// Label2 control.
@@ -67,12 +49,21 @@ namespace Prueba_Mierda_ASP {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// Button_Ingresar control.
+        /// TextBox_1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button_Ingresar;
+        protected global::System.Web.UI.WebControls.TextBox TextBox_1;
+        
+        /// <summary>
+        /// Label3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
     }
 }

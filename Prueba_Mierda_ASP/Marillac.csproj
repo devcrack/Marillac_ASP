@@ -99,6 +99,8 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="WebForM_Beneficiarios.aspx" />
+    <Content Include="WForm_Psicologos.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -107,10 +109,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Estilos_Login.css" />
+    <Content Include="estilos_generales.css" />
     <Content Include="logoMarillac.png" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Menu.aspx.cs">
@@ -121,12 +122,19 @@
       <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="WebForM_Beneficiarios.aspx.cs">
+      <DependentUpon>WebForM_Beneficiarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="WebForM_Beneficiarios.aspx.designer.cs">
+      <DependentUpon>WebForM_Beneficiarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WForm_Psicologos.aspx.cs">
+      <DependentUpon>WForm_Psicologos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WForm_Psicologos.aspx.designer.cs">
+      <DependentUpon>WForm_Psicologos.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>
