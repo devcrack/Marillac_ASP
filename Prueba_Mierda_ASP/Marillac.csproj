@@ -100,6 +100,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="WebForM_Beneficiarios.aspx" />
+    <Content Include="WebForm_Pacientes.aspx" />
     <Content Include="WForm_Psicologos.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -128,6 +129,13 @@
     </Compile>
     <Compile Include="WebForM_Beneficiarios.aspx.designer.cs">
       <DependentUpon>WebForM_Beneficiarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm_Pacientes.aspx.cs">
+      <DependentUpon>WebForm_Pacientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm_Pacientes.aspx.designer.cs">
+      <DependentUpon>WebForm_Pacientes.aspx</DependentUpon>
     </Compile>
     <Compile Include="WForm_Psicologos.aspx.cs">
       <DependentUpon>WForm_Psicologos.aspx</DependentUpon>

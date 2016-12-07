@@ -32,11 +32,12 @@
         <asp:TextBox ID="TextBox_10" runat="server" style="z-index: 1; left: 393px; top: 420px; position: absolute; margin-top: 0px; width: 156px;"></asp:TextBox>    
         <asp:Label ID="Label11" runat="server" style="z-index: 1; left: 220px; top: 460px; position: absolute; right: 983px" Text="Edad:"></asp:Label>
         <asp:TextBox ID="TextBox_11" runat="server" style="z-index: 1; left: 393px; top: 460px; position: absolute; margin-top: 0px; width: 56px;"></asp:TextBox>    
-        <asp:Table ID="Table1" runat="server" style="z-index: 2; left: 600px; top: 100px; position: absolute; height: 24px; width: 500px">
+        <asp:Table ID="Table1" runat="server" style="z-index: 2; left: 600px; top: 100px; position: absolute; height: 216px; width: 588px" BorderStyle="Solid">
         </asp:Table>
         <asp:Button ID="Button_Alta" runat="server" style="z-index: 1; left: 220px; top: 490px; position: absolute; width: 100px;" Text="Alta" OnClick="Button1_Click" />
         <asp:Button ID="Button_Modificacion" runat="server" style="z-index: 1; left: 325px; top: 490px; position: absolute; width: 100px;" Text="Modificar" OnClick="Button1_Click" />
-        <asp:Button ID="Button_Eliminar" runat="server" style="z-index: 1; left: 430px; top: 490px; position: absolute; width: 100px;" Text="Eliminar" OnClick="Button1_Click" />
+        <asp:Button ID="Button_Eliminar" runat="server" style="z-index: 1; left: 430px; top: 490px
+; position: absolute; width: 100px;" Text="Eliminar" OnClick="Button1_Click" />
         <asp:Button ID="Button_Pacientes" runat="server" style="z-index: 1; left: 220px; top: 530px; position: absolute; width: 100px;" Text="Pacientes" OnClick="Button1_Click" />
         <asp:Button ID="Button_Limpiar" runat="server" style="z-index: 1; left: 325px; top: 530px; position: absolute; width: 100px;" Text="Limpiar Campos" OnClick="Button1_Click" />
         <asp:Button ID="Button_Salir" runat="server" style="z-index: 1; left: 430px; top: 530px; position: absolute; width: 100px;" Text="Salir" OnClick="Button1_Click" />
