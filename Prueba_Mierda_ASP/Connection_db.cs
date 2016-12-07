@@ -17,13 +17,12 @@ namespace Prueba_Mierda_ASP
         private OracleConnection oracle_connect;
         private OracleCommand oracle_cmd;
         private OracleDataAdapter oracle_adapt;
-        Page pg;
 
         public Connection_db()
         {
             this.oracle_connect = new OracleConnection();
-            //this.oracle_connect.ConnectionString = "Data Source = localhost; User Id = MARILLAC_DEF; Password = oracle";
-            this.oracle_connect.ConnectionString = "Data Source = localhost; User Id = MARILLAC; Password = Mvaldes1";
+            this.oracle_connect.ConnectionString = "Data Source = localhost; User Id = MARILLAC_DEF; Password = oracle";
+            //this.oracle_connect.ConnectionString = "Data Source = localhost; User Id = MARILLAC; Password = Mvaldes1";
         }
 
         /// <summary>
