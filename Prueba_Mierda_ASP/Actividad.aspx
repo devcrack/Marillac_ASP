@@ -131,7 +131,7 @@
         <asp:GridView ID="GridView4" runat="server" OnSelectedIndexChanged="GridView4_SelectedIndexChanged" OnSelectedIndexChanging="GridView4_SelectedIndexChanging">
         </asp:GridView>
         <br />
-        <asp:Button ID="Button8" runat="server" Text="Alta" Width="64px" />
+        <asp:Button ID="Button8" runat="server" Text="Alta" Width="64px" OnClick="Button8_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button9" runat="server" OnClick="Button9_Click" Text="Baja" Width="64px" />
         <br />

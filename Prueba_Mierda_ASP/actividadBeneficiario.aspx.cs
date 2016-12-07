@@ -5,14 +5,15 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
-using Oracle.ManagedDataAccess.Client;
+//using Oracle.ManagedDataAccess.Client;
+using Oracle.DataAccess.Client;
 
 namespace Prueba_Mierda_ASP
 {
     public partial class actividadBeneficiario : System.Web.UI.Page
     {
 
-        string sConection = "Data Source=xe; User Id=MARILLAC_DEF; Password=oracle";
+        string sConection = "Data Source=xe; User Id=MARILLAC_2; Password=oracle";
         private int idBeneficiario;
 
         protected void Page_Load(object sender, EventArgs e)
