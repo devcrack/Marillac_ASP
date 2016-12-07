@@ -4,8 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-//using Oracle.ManagedDataAccess.Client;
-using Oracle.DataAccess.Client;
+using Oracle.ManagedDataAccess.Client;
+//using Oracle.DataAccess.Client;
 using System.Data;
 
 namespace Prueba_Mierda_ASP
@@ -13,7 +13,7 @@ namespace Prueba_Mierda_ASP
     public partial class altaHijoActividad : System.Web.UI.Page
     {
 
-        string stringConnection = "Data Source = xe; User Id = MARILLAC_2; Password = oracle";
+        string stringConnection = "Data Source = localhost; User Id = MARILLAC; Password = Mvaldes1";
         int id;
         int altaB;
 
