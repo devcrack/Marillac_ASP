@@ -11,8 +11,9 @@ namespace Prueba_Mierda_ASP
 {
     public partial class WForm_Psicologos : System.Web.UI.Page
     {
-        Connection_db connection = new Connection_db();
-        string id;
+        static int id_psico = -1;
+        Connection_db connection = new Connection_db();        
+
         protected void Page_Load(object sender, EventArgs e)
         {
             this.show_info();
@@ -30,6 +31,7 @@ namespace Prueba_Mierda_ASP
             {
                 if (rw.RowIndex == this.GridView_Psico.SelectedIndex)
                 {
+                    id_psico = int.Parse(rw.Cells[0].Text);
                     rw.BackColor = ColorTranslator.FromHtml("#A1DCF2");
                     this.TextBox_Nombre.Text = rw.Cells[1].Text;
                     this.TextBox_ApP.Text = rw.Cells[2].Text;
@@ -127,17 +129,31 @@ namespace Prueba_Mierda_ASP
                 return false;
             }
             if (string.Compare(this.TextBox_Dir.Text, string.Empty) == 0)
-            { ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "ServerControlScript", "alert('No hay Direccion')", true);
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "ServerControlScript", "alert('No hay Direccion')", true);
                 return false;
             }
             if (string.Compare(this.TextBox_Colon.Text, string.Empty) == 0)
+            { 
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "ServerControlScript", "alert('No ha seleccionado la colonia')", true);
                 return false;
+            }
             if (string.Compare(this.TextBox_Tel.Text, string.Empty) == 0)
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "ServerControlScript", "alert('Indique un Numero de telefono 10 Digitos')", true);
                 return false;
+            }
             if (string.Compare(this.TextBox_DiasL.Text, string.Empty) == 0)
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "ServerControlScript", "alert('Indique los dias que este psicologo Colabora')", true);
                 return false;
+            }
             if (string.Compare(this.TextBox_LimitPac.Text, string.Empty) == 0)
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "ServerControlScript", "alert('Cual es el limite de los pacientes')", true);
+
                 return false;
+            }
             if (!this.radioButt_Female.Checked)
             {
                 if (!this.radioButt_Male.Checked)
@@ -269,18 +285,83 @@ namespace Prueba_Mierda_ASP
                     "'" + this.TextBox_DiasL.Text + "')";
 
                 this.connection.alter_data_CUSTOM_query(query);
+                this.clear();
                 this.show_info();
                 
             }
-        }
-
+        }        
         protected void Button_Eliminar_Click(object sender, EventArgs e)
         {
+            if (id_psico != -1)
+            {
+                string query = "DELETE FROM PSICOLOGO WHERE IDPSICOLOGO = " + id_psico.ToString();
+                this.connection.alter_data_CUSTOM_query(query);
+                this.clear();
+                this.show_info();
+            }
+            else
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "ServerControlScript", "alert('Seleccione un Piscologo')", true);
 
+        }
+
+        private void clear()
+        {
+            this.TextBox_ApM.Text = "";
+            this.TextBox_ApP.Text = "";
+            this.TextBox_Colon.Text = "";
+            this.TextBox_DiasL.Text = "";
+            this.TextBox_Dir.Text = "";
+            this.TextBox_Edad.Text = "";
+            this.TextBox_Fech_Nac.Text = "";
+            this.TextBox_LimitPac.Text = "";
+            this.TextBox_Nombre.Text = "";
+            this.TextBox_Tel.Text = "";
+            this.radioButt_Female.Checked = false;
+            this.radioButt_Male.Checked = false;
+            this.CheckBox_Domingo.Checked = false;
+            this.CheckBox_Jueves.Checked = false;
+            this.CheckBox_Martes.Checked = false;
+            this.CheckBox_Sabado.Checked = false;
+            this.CheckBox_Viernes.Checked = false;
+            this.CheckBox_Lunes.Checked = false;
+            this.CheckBox_Miercoles.Checked = false;
         }
 
         protected void Button_Modificacion_Click(object sender, EventArgs e)
         {
+            if (id_psico != -1)
+            {
+                char sexo = this.get_Sexo();
+
+                string query = "UPDATE PSICOLOGO SET " +
+                    "NOMBRE = " + "'" + this.TextBox_Nombre.Text + "',"
+                    +
+                    "PATERNO = " + "'" + this.TextBox_ApP.Text + "',"
+                    +
+                    " MATERNO = " + "'" + this.TextBox_ApM.Text + "',"
+                    +
+                    "DIRECCION = " + "'" + this.TextBox_Dir.Text + "',"
+                    +
+                    "COLONIA = " + "'" + this.TextBox_Colon.Text + "',"
+                    +
+                    "TELEFONO = "  + this.TextBox_Tel.Text + ","
+                    +
+                    "SEXO = " + "'" + sexo + "',"
+                    +
+                    "LIMITEPACIENTES = " + this.TextBox_LimitPac.Text + ","
+                    +
+                    "FECHANACIMIENTO = " + "'" + this.TextBox_Fech_Nac.Text + "',"
+                    +
+                    "DIASLABORALES = " + "'" + this.TextBox_DiasL.Text + "'"
+                    +
+                    " WHERE IDPSICOLOGO = " + id_psico.ToString();
+
+                this.connection.alter_data_CUSTOM_query(query);
+                this.clear();
+                this.show_info();
+            }
+            else
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "ServerControlScript", "alert('Seleccione un Piscologo')", true);
 
         }
 
