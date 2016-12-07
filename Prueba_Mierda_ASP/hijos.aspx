@@ -5,6 +5,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            z-index: 1;
+            left: 548px;
+            top: 522px;
+            position: absolute;
+            height: 133px;
+            width: 404px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -41,7 +51,7 @@
         <asp:Label ID="Label5" runat="server" style="z-index: 1; left: 205px; top: 293px; position: absolute" Text="Beneficiario"></asp:Label>
         <asp:Label ID="Label6" runat="server" style="z-index: 1; left: 253px; top: 199px; position: absolute" Text="Sexo"></asp:Label>
         <asp:Label ID="Label8" runat="server" style="z-index: 1; left: 228px; top: 147px; position: absolute" Text="Nombre"></asp:Label>
-        <asp:GridView ID="actividadestabla" runat="server" style="z-index: 1; left: 567px; top: 636px; position: absolute; height: 133px; width: 404px">
+        <asp:GridView ID="actividadestabla" runat="server" CssClass="auto-style1">
         </asp:GridView>
         <asp:Panel ID="Panel1" runat="server" style="z-index: 1; left: 98px; top: 485px; position: absolute; height: 204px; width: 397px" Visible="False">
             <asp:Button ID="aceptar_beneficiario" runat="server" Text="Aceptar" OnClick="aceptar_beneficiario_Click" style="z-index: 1; left: 7px; top: 103px; position: absolute; right: 321px;" />

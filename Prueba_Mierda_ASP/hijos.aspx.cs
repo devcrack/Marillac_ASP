@@ -5,7 +5,6 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
-
 using Oracle.ManagedDataAccess.Client;
 
 
@@ -17,21 +16,15 @@ namespace Prueba_Mierda_ASP
         Decimal id;
         string idbene="";
 
-        string stringConnection = "Data Source = localhost; User Id = MARILLAC; Password = oracle";
+        string stringConnection = "Data Source = localhost; User Id = MARILLAC; Password = Mvaldes1";
+
         protected void Page_Load(object sender, EventArgs e)
         {
             //con("INSERT INTO COSA VALUES(100)");
 
-
-     
             hijostabla.DataSource = conDatos("SELECT *  FROM HIJO");
 
-          
-
             hijostabla.DataBind();
-
-        
-
         }
 
         public DataSet conDatos(String consulta)
@@ -86,9 +79,7 @@ namespace Prueba_Mierda_ASP
         protected void tabla2_SelectedIndexChanged(object sender, EventArgs e)
         {
             seleccion_tablaHijos();
-
-
-           
+  
         }
 
         protected void tabla2_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
@@ -97,6 +88,7 @@ namespace Prueba_Mierda_ASP
 
             id = Decimal.Parse(row.Cells[0].Text);
         }
+
         protected override void Render(HtmlTextWriter writer)
         {
             foreach (GridViewRow r in hijostabla.Rows)
@@ -176,7 +168,7 @@ namespace Prueba_Mierda_ASP
             idbene = row.Cells[1].Text;
             TextBox1.Text = idbene;
             idbene = TextBox1.Text;
-            beneficiario.Text = textoben(row.Cells[1].Text);
+            //beneficiario.Text = textoben(row.Cells[1].Text);
 
             actividadestabla.SelectedIndex = -1;
             actividaddatos(row.Cells[0].Text);
