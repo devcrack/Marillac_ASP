@@ -102,9 +102,6 @@
     <Content Include="Actividades.aspx" />
     <Content Include="Menu.aspx" />
     <Content Include="packages.config" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="WebForM_Beneficiarios.aspx" />
     <Content Include="WForm_Psicologos.aspx" />
     <None Include="Web.Debug.config">

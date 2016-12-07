@@ -11,8 +11,7 @@ namespace Prueba_Mierda_ASP
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //this.TextBox_1.Text = "Prueba";
-            //this.TextBox_2.Text = "Exitosa";
+
         }
 
         protected void Button1_Click(object sender, EventArgs e)
