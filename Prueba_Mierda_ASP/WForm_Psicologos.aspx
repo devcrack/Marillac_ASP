@@ -14,7 +14,6 @@
 
         <asp:TextBox ID="TextBox_2" runat="server" style="z-index: 1; left: 689px; top: 170px; position: absolute; margin-top: 0px"></asp:TextBox>
         <asp:Label ID="Label2" runat="server" style="z-index: 1; left: 559px; top: 168px; position: absolute; right: 685px" Text="Apellido Paterno"></asp:Label>
-        <asp:TextBox ID="TextBox_1" runat="server" OnTextChanged="TextBox_1_TextChanged" style="z-index: 1; left: 689px; top: 113px; position: absolute; margin-top: 0px"></asp:TextBox>
         <asp:Label ID="Label3" runat="server" style="z-index: 1; left: 556px; top: 116px; position: absolute; right: 765px" Text="Nombre"></asp:Label>
 
     </div>

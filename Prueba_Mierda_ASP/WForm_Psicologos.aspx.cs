@@ -11,8 +11,7 @@ namespace Prueba_Mierda_ASP
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.TextBox_1.Text = Request.QueryString["param1"].ToString();
-            this.TextBox_2.Text = Request.QueryString["param2"].ToString();
+
         }
     }
 }
