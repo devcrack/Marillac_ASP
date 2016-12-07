@@ -18,19 +18,6 @@ namespace Prueba_Mierda_ASP
             this.show_info();
         }
 
-        /// <summary>
-        /// Alta 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            if(this.check_values()== true)
-            {
-
-            }
-        }
-
         private void show_info()
         {
             this.GridView_Psico.DataSource = this.connection.query_get_data("PSICOLOGO").Tables[0].DefaultView;
@@ -181,6 +168,39 @@ namespace Prueba_Mierda_ASP
                     this.TextBox_DiasL.Text = str_1;
                 }
             }
+        }
+
+        protected void Button_Alta_Click(object sender, EventArgs e)
+        {
+            if (this.check_values() == true)
+            {
+
+            }
+        }
+
+        protected void Button_Eliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button_Modificacion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button_Pacientes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button_Limpiar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button_Salir_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
