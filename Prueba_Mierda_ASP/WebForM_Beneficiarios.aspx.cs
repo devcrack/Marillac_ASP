@@ -205,6 +205,7 @@ namespace Prueba_Mierda_ASP
         {
             if (nombre.Text != "" && paterno.Text != "" && materno.Text != "" && direccion.Text != "" && colonia.Text != "" && telefono.Text != "" && fechaNacimiento.Text != "")
             {
+                //
                 int index = GridView1.SelectedIndex;
                 int idBeneficiario = int.Parse(GridView1.Rows[index].Cells[1].Text);
 
