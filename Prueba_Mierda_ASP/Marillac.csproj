@@ -102,6 +102,7 @@
     <Content Include="actividadBeneficiario.aspx" />
     <Content Include="Actividades.aspx" />
     <Content Include="altaBeneficiarioActividad.aspx" />
+    <Content Include="hijos.aspx" />
     <Content Include="Menu.aspx" />
     <Content Include="packages.config" />
     <Content Include="psicologoBeneficiario.aspx" />
@@ -147,6 +148,13 @@
     </Compile>
     <Compile Include="altaBeneficiarioActividad.aspx.designer.cs">
       <DependentUpon>altaBeneficiarioActividad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hijos.aspx.cs">
+      <DependentUpon>hijos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hijos.aspx.designer.cs">
+      <DependentUpon>hijos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Menu.aspx.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
