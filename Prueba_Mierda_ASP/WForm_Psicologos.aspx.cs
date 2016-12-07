@@ -39,7 +39,7 @@ namespace Prueba_Mierda_ASP
                     this.TextBox_Tel.Text = rw.Cells[6].Text;
                     this.radio_Button_Change(Convert.ToChar(rw.Cells[7].Text));
                     this.TextBox_LimitPac.Text = rw.Cells[8].Text;
-                    this.TextBox_Fech_Nac.Text = rw.Cells[10].Text;
+                    this.TextBox_Fech_Nac.Text = rw.Cells[10].Text.Substring(0,10);
                     this.TextBox_Edad.Text = rw.Cells[11].Text;
                     this.TextBox_DiasL.Text = (string.Compare(rw.Cells[12].Text, "&nbsp;") == 0) ? "" : rw.Cells[12].Text;
                     //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "No mames", "alert('Registro Seleccionado')", true);
@@ -246,7 +246,7 @@ namespace Prueba_Mierda_ASP
                 string query =
                     "INSERT INTO PSICOLOGO (NOMBRE, PATERNO, MATERNO, DIRECCION,"
                     +
-                    "COLONIA, TELEFONO, SEXO, LIMITEPACIENTES,FECHANACIMIENTO, DIASLABORALES VALUES ("
+                    "COLONIA, TELEFONO, SEXO, LIMITEPACIENTES,FECHANACIMIENTO, DIASLABORALES) VALUES ("
                     +
                     "'" + this.TextBox_Nombre.Text + "',"
                     +
