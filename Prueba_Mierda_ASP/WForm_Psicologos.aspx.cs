@@ -178,7 +178,25 @@ namespace Prueba_Mierda_ASP
 
         protected void Button_Pacientes_Click(object sender, EventArgs e)
         {
+            int idPsicologo = -1;
 
+            try
+            {
+                int index = GridView_Psico.SelectedIndex;
+                idPsicologo = int.Parse(GridView_Psico.Rows[index].Cells[0].Text);
+                if (idPsicologo > 0)
+                    Response.Redirect("~/altaPacientePsicologo.aspx?idPsicologo=" + idPsicologo.ToString());
+                else
+                {
+                    string script = "alert(\"Seleccione un psicologo.\");";
+                    ScriptManager.RegisterStartupScript(this, GetType(), "ServerControlScript", script, true);
+                }
+            }
+            catch
+            {
+                string script = "alert(\"Seleccione un psicologo.\");";
+                ScriptManager.RegisterStartupScript(this, GetType(), "ServerControlScript", script, true);
+            }
         }
 
         protected void Button_Limpiar_Click(object sender, EventArgs e)
@@ -188,7 +206,7 @@ namespace Prueba_Mierda_ASP
 
         protected void Button_Salir_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Menu.aspx");
         }
 
     }
