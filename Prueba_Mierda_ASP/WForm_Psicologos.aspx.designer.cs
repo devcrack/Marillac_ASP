@@ -40,13 +40,22 @@ namespace Prueba_Mierda_ASP {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// TextBox_1 control.
+        /// TextBox_Nombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_1;
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Nombre;
+        
+        /// <summary>
+        /// TextBox_ApP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_ApP;
         
         /// <summary>
         /// Label2 control.
@@ -58,22 +67,13 @@ namespace Prueba_Mierda_ASP {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// TextBox_3 control.
+        /// TextBox_ApM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_3;
-        
-        /// <summary>
-        /// TextBox_2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_2;
+        protected global::System.Web.UI.WebControls.TextBox TextBox_ApM;
         
         /// <summary>
         /// Label4 control.
@@ -94,13 +94,13 @@ namespace Prueba_Mierda_ASP {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// TextBox_4 control.
+        /// TextBox_Dir control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_4;
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Dir;
         
         /// <summary>
         /// Label6 control.
@@ -112,13 +112,13 @@ namespace Prueba_Mierda_ASP {
         protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
-        /// TextBox_5 control.
+        /// TextBox_Colon control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_5;
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Colon;
         
         /// <summary>
         /// Label7 control.
@@ -130,13 +130,13 @@ namespace Prueba_Mierda_ASP {
         protected global::System.Web.UI.WebControls.Label Label7;
         
         /// <summary>
-        /// TextBox_7 control.
+        /// TextBox_Tel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_7;
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Tel;
         
         /// <summary>
         /// Label8 control.
@@ -148,15 +148,6 @@ namespace Prueba_Mierda_ASP {
         protected global::System.Web.UI.WebControls.Label Label8;
         
         /// <summary>
-        /// TextBox_8 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_8;
-        
-        /// <summary>
         /// Label9 control.
         /// </summary>
         /// <remarks>
@@ -166,13 +157,13 @@ namespace Prueba_Mierda_ASP {
         protected global::System.Web.UI.WebControls.Label Label9;
         
         /// <summary>
-        /// TextBox_9 control.
+        /// TextBox_LimitPac control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_9;
+        protected global::System.Web.UI.WebControls.TextBox TextBox_LimitPac;
         
         /// <summary>
         /// Label10 control.
@@ -184,13 +175,13 @@ namespace Prueba_Mierda_ASP {
         protected global::System.Web.UI.WebControls.Label Label10;
         
         /// <summary>
-        /// TextBox_10 control.
+        /// TextBox_Fech_Nac control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_10;
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Fech_Nac;
         
         /// <summary>
         /// Label11 control.
@@ -202,22 +193,13 @@ namespace Prueba_Mierda_ASP {
         protected global::System.Web.UI.WebControls.Label Label11;
         
         /// <summary>
-        /// TextBox_11 control.
+        /// TextBox_Edad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_11;
-        
-        /// <summary>
-        /// Table1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Table Table1;
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Edad;
         
         /// <summary>
         /// Button_Alta control.
@@ -272,5 +254,104 @@ namespace Prueba_Mierda_ASP {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button_Salir;
+        
+        /// <summary>
+        /// TextBox_DiasL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_DiasL;
+        
+        /// <summary>
+        /// CheckBox_Lunes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox CheckBox_Lunes;
+        
+        /// <summary>
+        /// CheckBox_Martes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox CheckBox_Martes;
+        
+        /// <summary>
+        /// CheckBox_Miercoles control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox CheckBox_Miercoles;
+        
+        /// <summary>
+        /// CheckBox_Jueves control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox CheckBox_Jueves;
+        
+        /// <summary>
+        /// CheckBox_Viernes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox CheckBox_Viernes;
+        
+        /// <summary>
+        /// CheckBox_Sabado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox CheckBox_Sabado;
+        
+        /// <summary>
+        /// CheckBox_Domingo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox CheckBox_Domingo;
+        
+        /// <summary>
+        /// GridView_Psico control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView_Psico;
+        
+        /// <summary>
+        /// radioButt_Male control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton radioButt_Male;
+        
+        /// <summary>
+        /// radioButt_Female control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton radioButt_Female;
     }
 }

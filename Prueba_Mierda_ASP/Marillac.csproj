@@ -132,6 +132,7 @@
     <Compile Include="Actividades.aspx.designer.cs">
       <DependentUpon>Actividades.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Connection_db.cs" />
     <Compile Include="Menu.aspx.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
