@@ -11,8 +11,8 @@ namespace Prueba_Mierda_ASP
 {
     public partial class psicologoBeneficiario : System.Web.UI.Page
     {
-        //private string sConection = "Data Source=localhost; User Id=MARILLAC; Password=Mvaldes1";
-        private string sConection = "Data Source=xe; User Id=MARILLAC_DEF; Password=oracle";
+        private string sConection = "Data Source=localhost; User Id=MARILLAC; Password=Mvaldes1";
+        //private string sConection = "Data Source=xe; User Id=MARILLAC_DEF; Password=oracle";
         private int idBeneficiario;
 
         protected void Page_Load(object sender, EventArgs e)

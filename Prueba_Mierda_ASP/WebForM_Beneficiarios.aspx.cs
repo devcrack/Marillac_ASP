@@ -11,8 +11,8 @@ namespace Prueba_Mierda_ASP
 {
     public partial class WebForM_Beneficiarios : System.Web.UI.Page
     {
-        //string sConection = "Data Source=localhost; User Id=MARILLAC; Password=Mvaldes1";
-        string sConection = "Data Source=xe; User Id=MARILLAC_DEF; Password=oracle";
+        string sConection = "Data Source=localhost; User Id=MARILLAC; Password=Mvaldes1";
+        //string sConection = "Data Source=xe; User Id=MARILLAC_DEF; Password=oracle";
 
         protected void Page_Load(object sender, EventArgs e)
         {
