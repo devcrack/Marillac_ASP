@@ -16,7 +16,7 @@ namespace Prueba_Mierda_ASP
         Decimal id;
         string idbene="";
 
-        string stringConnection = "Data Source = localhost; User Id = MARILLAC; Password = Mvaldes1";
+        string stringConnection = "Data Source = xe; User Id = MARILLAC_DEF; Password = oracle";
 
         protected void Page_Load(object sender, EventArgs e)
         {

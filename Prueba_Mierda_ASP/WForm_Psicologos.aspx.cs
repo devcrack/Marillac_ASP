@@ -69,18 +69,6 @@ namespace Prueba_Mierda_ASP
         {
             return (this.radioButt_Male.Checked) ? 'M' : 'F';
         }
-        //protected override void Render(HtmlTextWriter wr)
-        //{
-        //    foreach (GridViewRow row in this.GridView_Psico.Rows)
-        //    {
-        //        if (row.RowType == DataControlRowType.DataRow)
-        //        {
-        //            row.ToolTip = "Haga click para seleccionar la Fila";
-        //            row.Attributes["onclick"] = this.Page.ClientScript.GetPostBackClientHyperlink(this.GridView_Psico, "Select$" + row.RowIndex, true);
-        //        }
-        //    }
-        //    base.Render(wr);
-        //}
 
         protected void GridView_Psico_RowCreated(object sender, System.Web.UI.WebControls.GridViewRowEventArgs e)
         {
@@ -202,5 +190,6 @@ namespace Prueba_Mierda_ASP
         {
 
         }
+
     }
 }
