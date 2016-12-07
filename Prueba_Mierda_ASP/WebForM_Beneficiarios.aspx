@@ -248,7 +248,7 @@
             <asp:Button ID="baja" runat="server" CssClass="auto-style21" Text="Baja" Width="100px" OnClick="baja_Click" />
             <asp:Button ID="modificar" runat="server" CssClass="auto-style22" Text="Modificar" Width="100px" OnClick="modificar_Click" />
             <asp:Button ID="hijos" runat="server" CssClass="auto-style23" Text="Hijos" Width="100px" />
-            <asp:Button ID="psicologo" runat="server" CssClass="auto-style24" Text="Psicólogo" Width="100px" Height="22px" />
+            <asp:Button ID="psicologo" runat="server" CssClass="auto-style24" Text="Psicólogo" Width="100px" Height="22px" OnClick="psicologo_Click" />
             <asp:Button ID="limpiar" runat="server" CssClass="auto-style25" OnClick="limpiar_Click" Text="Limpiar campos" Width="100px" Height="22px" />
             <asp:GridView ID="GridView1" runat="server" CssClass="auto-style29" AutoGenerateSelectButton="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
             </asp:GridView>

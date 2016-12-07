@@ -237,5 +237,28 @@ namespace Prueba_Mierda_ASP
                     ScriptManager.RegisterStartupScript(this, GetType(), "ServerControlScript", script, true);
                 }
         }
+
+        protected void psicologo_Click(object sender, EventArgs e)
+        {
+            int idBeneficiario = -1;
+
+            try
+            {
+                int index = GridView1.SelectedIndex;
+                idBeneficiario = int.Parse(GridView1.Rows[index].Cells[1].Text);
+                if(idBeneficiario>0)
+                    Response.Redirect("~/psicologoBeneficiario.aspx?idPsicologo="+idBeneficiario.ToString());  
+                else
+                {
+                    string script = "alert(\"Seleccione un beneficiario.\");";
+                    ScriptManager.RegisterStartupScript(this, GetType(), "ServerControlScript", script, true);
+                }
+            }
+            catch {
+                string script = "alert(\"Seleccione un beneficiario.\");";
+                ScriptManager.RegisterStartupScript(this, GetType(), "ServerControlScript", script, true);
+            }
+            
+        }
     }
 }

@@ -114,6 +114,7 @@
     <Content Include="Actividades.aspx" />
     <Content Include="Menu.aspx" />
     <Content Include="packages.config" />
+    <Content Include="psicologoBeneficiario.aspx" />
     <Content Include="WebForM_Beneficiarios.aspx" />
     <Content Include="WForm_Psicologos.aspx" />
     <None Include="Web.Debug.config">
@@ -151,6 +152,13 @@
       <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="psicologoBeneficiario.aspx.cs">
+      <DependentUpon>psicologoBeneficiario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="psicologoBeneficiario.aspx.designer.cs">
+      <DependentUpon>psicologoBeneficiario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForM_Beneficiarios.aspx.cs">
       <DependentUpon>WebForM_Beneficiarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
