@@ -34,7 +34,7 @@
         
         <%--<asp:Label ID="Label1" runat="server" Font-Size="Larger" style="z-index: 1; left: 591px; top: 21px; position: absolute; height: 33px; width: 274px" Text="Crentro de Ayuda Marillac"></asp:Label>--%>
         <asp:Button ID="Button_Beneficiarios" runat="server" OnClick="Button_Beneficiarios_Click" style="z-index: 1; left: 674px; top: 227px; position: absolute; height: 41px; width: 100px" Text="Beneficiarios" CssClass="buttons" />
-        <asp:Button ID="Button_Hijos" runat="server" OnClick="Button_psicologos_Click" style="z-index: 1; left: 532px; top: 301px; position: absolute; height: 41px; width: 100px; text-align: justify;" Text="Hijos" CssClass="buttons" />
+        <asp:Button ID="Button_Hijos" runat="server" OnClick="Button_Hijos_Click" style="z-index: 1; left: 532px; top: 301px; position: absolute; height: 41px; width: 100px; text-align: justify;" Text="Hijos" CssClass="buttons" />
         <asp:Button ID="Button_Actividades" runat="server" OnClick="Button_Actividades_Click" style="z-index: 1; left: 679px; top: 301px; position: absolute; height: 41px; width: 100px" Text="Actividades" CssClass="buttons"/>
         <asp:Button ID="Button_Profesores0" runat="server" OnClick="Button_Beneficiarios_Click" style="z-index: 1; left: 816px; top: 227px; position: absolute; height: 41px; width: 100px" Text="Profesores"  CssClass="buttons"/>
         <asp:Button ID="Button_Psicologos1" runat="server" OnClick="Button_psicologos_Click" style="z-index: 1; left: 534px; top: 230px; position: absolute; height: 41px; width: 100px; text-align: justify;" Text="Psicologos" CssClass="buttons"/>

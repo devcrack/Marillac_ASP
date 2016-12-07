@@ -28,7 +28,17 @@ namespace Prueba_Mierda_ASP
 
         protected void Button_Beneficiarios_Click(object sender, EventArgs e)
         {
-            //Response.Redirect("~/WebForM_Beneficiarios.aspx?param1=" + this.TextBox_1.Text + "&param2=" + this.TextBox_2.Text);           
+            Response.Redirect("~/WebForM_Beneficiarios.aspx");       
+        }
+
+        protected void Button_Actividades_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Actividad.aspx?");
+        }
+
+        protected void Button_Hijos_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("hijos.aspx?");
         }
 
         protected void Button_Actividades_Click(object sender, EventArgs e)
