@@ -35,23 +35,18 @@
         <%--<asp:Label ID="Label1" runat="server" Font-Size="Larger" style="z-index: 1; left: 591px; top: 21px; position: absolute; height: 33px; width: 274px" Text="Crentro de Ayuda Marillac"></asp:Label>--%>
         <asp:Button ID="Button_Beneficiarios" runat="server" OnClick="Button_Beneficiarios_Click" style="z-index: 1; left: 674px; top: 227px; position: absolute; height: 41px; width: 100px" Text="Beneficiarios" CssClass="buttons" />
         <asp:Button ID="Button_Hijos" runat="server" OnClick="Button_psicologos_Click" style="z-index: 1; left: 532px; top: 301px; position: absolute; height: 41px; width: 100px; text-align: justify;" Text="Hijos" CssClass="buttons" />
-        <asp:Label ID="Label3" runat="server" style="z-index: 1; left: 527px; top: 422px; position: absolute; width: 152px" Text="Ejemplos_Parametro2"></asp:Label>
         <asp:Button ID="Button_Actividades" runat="server" OnClick="Button_Beneficiarios_Click" style="z-index: 1; left: 679px; top: 301px; position: absolute; height: 41px; width: 100px" Text="Actividades" CssClass="buttons"/>
         <asp:Button ID="Button_Profesores0" runat="server" OnClick="Button_Beneficiarios_Click" style="z-index: 1; left: 816px; top: 227px; position: absolute; height: 41px; width: 100px" Text="Profesores"  CssClass="buttons"/>
         <asp:Button ID="Button_Psicologos1" runat="server" OnClick="Button_psicologos_Click" style="z-index: 1; left: 534px; top: 230px; position: absolute; height: 41px; width: 100px; text-align: justify;" Text="Psicologos" CssClass="buttons"/>
         <asp:Button ID="Button_Actividades0" runat="server" OnClick="Button_Beneficiarios_Click" style="z-index: 1; left: 819px; top: 301px; position: absolute; height: 41px; width: 100px" Text="Salir" CssClass="buttons"/>
-        <asp:Label ID="Label2" runat="server" style="z-index: 1; left: 529px; top: 381px; position: absolute; width: 146px" Text="Ejemplo_Parametro1"></asp:Label>
         <asp:Image ID="Image1" runat="server" style="z-index: 1; left: 528px; top: 74px; position: absolute; height: 116px; width: 386px; margin-top: 3px;" CssClass="imagen_login" />
         &nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox_2" runat="server" style="z-index: 1; left: 697px; top: 424px; position: absolute"></asp:TextBox>
-        
+                
     &nbsp;&nbsp;&nbsp;
         
     </div>
         <p>
-        <asp:TextBox ID="TextBox_1" runat="server" style="z-index: 1; left: 698px; top: 379px; position: absolute"></asp:TextBox>
-        
-        </p>
+            &nbsp;</p>
     </form>
 </body>
 </html>
