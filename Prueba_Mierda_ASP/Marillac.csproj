@@ -76,9 +76,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Oracle.DataAccess, Version=4.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\oraclexe\app\oracle\product\11.2.0\server\odp.net\bin\4\Oracle.DataAccess.dll</HintPath>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.24160719\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Actividad.aspx" />
+    <Content Include="actividadBeneficiario.aspx" />
     <Content Include="Actividades.aspx" />
     <Content Include="altaBeneficiarioActividad.aspx" />
     <Content Include="Menu.aspx" />
@@ -125,6 +126,13 @@
     </Compile>
     <Compile Include="Actividad.aspx.designer.cs">
       <DependentUpon>Actividad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="actividadBeneficiario.aspx.cs">
+      <DependentUpon>actividadBeneficiario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="actividadBeneficiario.aspx.designer.cs">
+      <DependentUpon>actividadBeneficiario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Actividades.aspx.cs">
       <DependentUpon>Actividades.aspx</DependentUpon>

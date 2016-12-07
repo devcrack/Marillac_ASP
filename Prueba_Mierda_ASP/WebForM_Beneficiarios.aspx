@@ -243,7 +243,7 @@
             <asp:CheckBox ID="femenino" runat="server" CssClass="auto-style18" OnCheckedChanged="femenino_CheckedChanged" TabIndex="8" Text="Femenino" AutoPostBack="True" />
             <asp:TextBox ID="telefono" runat="server" style="margin-top: 0px" CssClass="auto-style16" TabIndex="6"></asp:TextBox>
             <asp:Button ID="salir" runat="server" CssClass="auto-style28" OnClick="salir_Click" Text="Salir" />
-            <asp:Button ID="actividades" runat="server" CssClass="auto-style27" Text="Actividades" Width="100px" />
+            <asp:Button ID="actividades" runat="server" CssClass="auto-style27" Text="Actividades" Width="100px" OnClick="actividades_Click" />
             <asp:Button ID="alta" runat="server" CssClass="auto-style20" OnClick="alta_Click" Text="Alta" Width="100px" />
             <asp:Button ID="baja" runat="server" CssClass="auto-style21" Text="Baja" Width="100px" OnClick="baja_Click" />
             <asp:Button ID="modificar" runat="server" CssClass="auto-style22" Text="Modificar" Width="100px" OnClick="modificar_Click" />

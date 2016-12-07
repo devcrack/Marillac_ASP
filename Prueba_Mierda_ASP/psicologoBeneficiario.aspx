@@ -17,18 +17,18 @@
         <div>
     
             <asp:Label ID="Label1" runat="server" Text="Nombre: "></asp:Label>
-            <asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style3"></asp:TextBox>
+            <asp:TextBox ID="nombre" runat="server" CssClass="auto-style3" ReadOnly="True"></asp:TextBox>
             <br />
             <br />
             Apellido paterno:
-            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+            <asp:TextBox ID="paterno" runat="server" ReadOnly="True"></asp:TextBox>
             <br />
             <br />
             Apellido materno:
-            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+            <asp:TextBox ID="materno" runat="server" ReadOnly="True"></asp:TextBox>
             <br />
             Teléfono:
-            <asp:TextBox ID="TextBox4" runat="server" CssClass="auto-style1"></asp:TextBox>
+            <asp:TextBox ID="telefono" runat="server" CssClass="auto-style1" ReadOnly="True"></asp:TextBox>
             <br />
             <br />
             <asp:Button ID="salir" runat="server" OnClick="salir_Click" Text="Salir" />
