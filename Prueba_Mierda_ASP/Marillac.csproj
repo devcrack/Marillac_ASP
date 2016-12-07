@@ -103,6 +103,7 @@
     <Content Include="Actividades.aspx" />
     <Content Include="altaBeneficiarioActividad.aspx" />
     <Content Include="altaHijoActividad.aspx" />
+    <Content Include="altaPacientePsicologo.aspx" />
     <Content Include="hijos.aspx" />
     <Content Include="Menu.aspx" />
     <Content Include="packages.config" />
@@ -158,6 +159,13 @@
     </Compile>
     <Compile Include="altaHijoActividad.aspx.designer.cs">
       <DependentUpon>altaHijoActividad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="altaPacientePsicologo.aspx.cs">
+      <DependentUpon>altaPacientePsicologo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="altaPacientePsicologo.aspx.designer.cs">
+      <DependentUpon>altaPacientePsicologo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connection_db.cs" />
     <Compile Include="hijos.aspx.cs">

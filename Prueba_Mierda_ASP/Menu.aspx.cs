@@ -11,13 +11,6 @@ namespace Prueba_Mierda_ASP
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //this.Label2.Text += Request.QueryString["param1"].ToString();
-            //this.Label3.Text += Request.QueryString["param2"].ToString();
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-
         }
 
         protected void Button_psicologos_Click(object sender, EventArgs e)
@@ -28,7 +21,7 @@ namespace Prueba_Mierda_ASP
 
         protected void Button_Beneficiarios_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/profesores.aspx");       
+            Response.Redirect("~/WebForM_Beneficiarios.aspx");       
         }
 
         protected void Button_Actividades_Click(object sender, EventArgs e)
@@ -38,7 +31,12 @@ namespace Prueba_Mierda_ASP
 
         protected void Button_Hijos_Click(object sender, EventArgs e)
         {
-            Response.Redirect("hijos.aspx?");
+            Response.Redirect("~/hijos.aspx?");
+        }
+
+        protected void Button_Profesores0_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/profesores.aspx");
         }
     }
 }
