@@ -12,5 +12,10 @@ namespace Prueba_Mierda_ASP
         protected void Page_Load(object sender, EventArgs e)
         {
         }
+
+        protected void salir_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Menu.aspx");
+        }
     }
 }
