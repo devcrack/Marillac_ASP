@@ -89,6 +89,8 @@ namespace Prueba_Mierda_ASP
                 {
                     if(string.Compare(((TextBox)c).Text,string.Empty) == 0)
                     {
+                        // string script = "alert(\"No deben existir campos vacios.\");";
+                        //ScriptManager.RegisterStartupScript(this, GetType(), "ServerControlScript", script, true);
                         ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "No mames", "alert('NO DEBE DE HABER CAMPOS VACIOS')", true);
                         return false;
                     }
@@ -105,45 +107,54 @@ namespace Prueba_Mierda_ASP
             return true;
         }
 
-        protected void CheckBox_Lunes_CheckedChanged(object sender, EventArgs e)
-        {
 
+        private bool check_fields()
+        {
+            if (string.Compare(this.TextBox_Nombre.Text, string.Empty) == 0)
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "ServerControlScript", "alert('NO hay Nombre')", true);
+                return false;
+            }
+            if (string.Compare(this.TextBox_ApP.Text, string.Empty) == 0)
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "ServerControlScript", "alert('No hay Apellido Paterno')", true);
+
+                return false;
+            }
+            if (string.Compare(this.TextBox_ApM.Text, string.Empty) == 0)
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "ServerControlScript", "alert('No hay Apellido Materno')", true);
+                return false;
+            }
+            if (string.Compare(this.TextBox_Dir.Text, string.Empty) == 0)
+            { ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "ServerControlScript", "alert('No hay Direccion')", true);
+                return false;
+            }
+            if (string.Compare(this.TextBox_Colon.Text, string.Empty) == 0)
+                return false;
+            if (string.Compare(this.TextBox_Tel.Text, string.Empty) == 0)
+                return false;
+            if (string.Compare(this.TextBox_DiasL.Text, string.Empty) == 0)
+                return false;
+            if (string.Compare(this.TextBox_LimitPac.Text, string.Empty) == 0)
+                return false;
+            if (!this.radioButt_Female.Checked)
+            {
+                if (!this.radioButt_Male.Checked)
+                {
+                    string script = "alert(\"Seleccione un Sexo.\");";
+                    ScriptManager.RegisterStartupScript(this, GetType(), "ServerControlScript", script, true);
+                    return false;
+                }
+            }
+            return true;
         }
 
-        protected void CheckBox_Martes_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void CheckBox_Miercoles_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void CheckBox_Jueves_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void CheckBox_Viernes_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void CheckBox_Sabado_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void CheckBox_Domingo_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-         private void manage_Days(bool is_check, string str)
+        private void manage_Days(bool is_check, string str)
         {
             if (is_check)
             {
+
                 if (this.TextBox_DiasL.Text.Contains(str) == false)
                     this.TextBox_DiasL.Text += str;
             }
@@ -158,11 +169,108 @@ namespace Prueba_Mierda_ASP
             }
         }
 
+         public void sort_days()
+        {
+            string main_String = this.TextBox_DiasL.Text;
+            string txt_Aux = string.Empty;
+            string[] days = { "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo" };
+            List<string> days_List = new List<string>();
+
+            foreach (string m_day in days)
+            {
+                if(main_String.Contains(m_day) == true)
+                {
+                    days_List.Add(m_day);
+                    main_String = main_String.Replace(m_day, string.Empty);                    
+                }
+            }
+            this.TextBox_DiasL.Text = string.Empty;
+            foreach(string str in days_List)
+            {
+                if (string.Compare(this.TextBox_DiasL.Text, string.Empty) == 0)
+                    this.TextBox_DiasL.Text += str;
+                else
+                    this.TextBox_DiasL.Text += "-" + str;
+            }
+        }
+       
+
+        protected void CheckBox_Lunes_CheckedChanged(object sender, EventArgs e)
+        {
+            this.manage_Days(this.CheckBox_Lunes.Checked, "Lunes");
+            this.sort_days();
+        }
+
+        protected void CheckBox_Martes_CheckedChanged(object sender, EventArgs e)
+        {
+            this.manage_Days(this.CheckBox_Martes.Checked, "Martes");
+            this.sort_days();
+        }
+
+        protected void CheckBox_Miercoles_CheckedChanged(object sender, EventArgs e)
+        {
+            this.manage_Days(this.CheckBox_Miercoles.Checked, "Miercoles");
+            this.sort_days();
+        }
+
+        protected void CheckBox_Jueves_CheckedChanged(object sender, EventArgs e)
+        {
+            this.manage_Days(this.CheckBox_Jueves.Checked, "Jueves");
+            this.sort_days();
+        }
+
+        protected void CheckBox_Viernes_CheckedChanged(object sender, EventArgs e)
+        {
+            this.manage_Days(this.CheckBox_Viernes.Checked, "Viernes");
+            this.sort_days();
+        }
+
+        protected void CheckBox_Sabado_CheckedChanged(object sender, EventArgs e)
+        {
+            this.manage_Days(this.CheckBox_Sabado.Checked, "Sabado");
+            this.sort_days();
+        }
+
+        protected void CheckBox_Domingo_CheckedChanged(object sender, EventArgs e)
+        {
+            this.manage_Days(this.CheckBox_Domingo.Checked, "Domingo");
+            this.sort_days();
+        }
+
+      
         protected void Button_Alta_Click(object sender, EventArgs e)
         {
-            if (this.check_values() == true)
+            if (this.check_fields() == true)
             {
+                char sexo = this.get_Sexo();
+                string query =
+                    "INSERT INTO PSICOLOGO (NOMBRE, PATERNO, MATERNO, DIRECCION,"
+                    +
+                    "COLONIA, TELEFONO, SEXO, LIMITEPACIENTES,FECHANACIMIENTO, DIASLABORALES VALUES ("
+                    +
+                    "'" + this.TextBox_Nombre.Text + "',"
+                    +
+                    "'" + this.TextBox_ApP.Text + "',"
+                    +
+                    "'" + this.TextBox_ApM.Text + "',"
+                    +
+                    "'" + this.TextBox_Dir.Text + "',"
+                    +
+                    "'" + this.TextBox_Colon.Text + "',"
+                    +
+                    this.TextBox_Tel.Text + ","
+                    +
+                    "'" + sexo + "',"
+                    +
+                    this.TextBox_LimitPac.Text + ","
+                    +
+                    "'" + this.TextBox_Fech_Nac.Text + "',"
+                    +
+                    "'" + this.TextBox_DiasL.Text + "')";
 
+                this.connection.alter_data_CUSTOM_query(query);
+                this.show_info();
+                
             }
         }
 
@@ -209,5 +317,19 @@ namespace Prueba_Mierda_ASP
             Response.Redirect("~/Menu.aspx");
         }
 
+        protected void radioButt_Male_CheckedChanged1(object sender, EventArgs e)
+        {
+            this.radioButt_Male.Checked = true;
+            if (radioButt_Female.Checked)
+                this.radioButt_Female.Checked = false;
+        }
+
+        protected void radioButt_Female_CheckedChanged1(object sender, EventArgs e)
+        {
+            this.radioButt_Female.Checked = true;
+            if (this.radioButt_Male.Checked)
+                this.radioButt_Male.Checked = false;
+
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace Prueba_Mierda_ASP
 {
     public partial class Actividad : System.Web.UI.Page
     {
-        string stringConnection = "Data Source = xe; User Id = MARILLAC_2; Password = oracle";
+        string stringConnection = "Data Source = xe; User Id = MARILLAC_DEF; Password = oracle";
         string dias = "";
         int idA;
         int idB;
