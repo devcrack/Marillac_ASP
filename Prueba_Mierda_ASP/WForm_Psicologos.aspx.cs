@@ -31,6 +31,7 @@ namespace Prueba_Mierda_ASP
             {
                 if (rw.RowIndex == this.GridView_Psico.SelectedIndex)
                 {
+                    this.clear();
                     id_psico = int.Parse(rw.Cells[0].Text);
                     rw.BackColor = ColorTranslator.FromHtml("#A1DCF2");
                     this.TextBox_Nombre.Text = rw.Cells[1].Text;
@@ -44,6 +45,7 @@ namespace Prueba_Mierda_ASP
                     this.TextBox_Fech_Nac.Text = rw.Cells[10].Text.Substring(0,10);
                     this.TextBox_Edad.Text = rw.Cells[11].Text;
                     this.TextBox_DiasL.Text = (string.Compare(rw.Cells[12].Text, "&nbsp;") == 0) ? "" : rw.Cells[12].Text;
+                    this.fill_CheckBoxes();
                     //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "No mames", "alert('Registro Seleccionado')", true);
                 }
                 else
@@ -302,6 +304,43 @@ namespace Prueba_Mierda_ASP
             else
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "ServerControlScript", "alert('Seleccione un Piscologo')", true);
 
+        }
+
+
+         private void fill_CheckBoxes()
+        {
+            string[] days = { "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo" };
+
+            for(int index = 0; index < days.Length; index++)
+            {
+                if(this.TextBox_DiasL.Text.Contains(days[index])== true)
+                {
+                    switch(index)
+                    {
+                        case 0:
+                            this.CheckBox_Lunes.Checked = true;
+                            break;
+                        case 1:
+                            this.CheckBox_Martes.Checked = true;
+                            break;
+                        case 2:
+                            this.CheckBox_Miercoles.Checked = true;
+                            break;
+                        case 3:
+                            this.CheckBox_Jueves.Checked = true;
+                            break;
+                        case 4:
+                            this.CheckBox_Viernes.Checked = true;
+                            break;
+                        case 5:
+                            this.CheckBox_Sabado.Checked = true;
+                            break;
+                        case 6:
+                            this.CheckBox_Domingo.Checked = true;
+                            break;
+                    }
+                }
+            }
         }
 
         private void clear()
