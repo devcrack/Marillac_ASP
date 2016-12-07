@@ -23,7 +23,7 @@
     </div>
         <asp:GridView ID="hijostabla" runat="server" OnPreRender="hijostabla_PreRender" OnSelectedIndexChanged="tabla2_SelectedIndexChanged" OnSelectedIndexChanging="tabla2_SelectedIndexChanging" style="z-index: 1; left: 570px; top: 82px; position: absolute; height: 133px; width: 417px" ViewStateMode="Enabled">
         </asp:GridView>
-        <asp:TextBox ID="nombre" runat="server" style="z-index: 1; left: 292px; top: 51px; position: absolute; width: 185px"></asp:TextBox>
+        <asp:TextBox ID="paterno" runat="server" style="z-index: 1; left: 292px; top: 51px; position: absolute; width: 185px"></asp:TextBox>
         <p>
             &nbsp;</p>
         <p>
@@ -31,8 +31,8 @@
         <p>
             <asp:Button ID="boton_agregar" runat="server" OnClick="boton_agregar_Click" style="z-index: 1; left: 120px; top: 359px; position: absolute; width: 74px" Text="Agregar" />
         </p>
-        <asp:TextBox ID="paterno" runat="server" style="z-index: 1; left: 291px; top: 100px; position: absolute; width: 184px" TabIndex="1"></asp:TextBox>
-        <asp:TextBox ID="materno" runat="server" style="z-index: 1; left: 293px; top: 147px; position: absolute; width: 187px" TabIndex="2"></asp:TextBox>
+        <asp:TextBox ID="materno" runat="server" style="z-index: 1; left: 291px; top: 100px; position: absolute; width: 184px" TabIndex="1"></asp:TextBox>
+        <asp:TextBox ID="nombre" runat="server" style="z-index: 1; left: 293px; top: 147px; position: absolute; width: 187px" TabIndex="2"></asp:TextBox>
         <asp:TextBox ID="fecha" runat="server" style="z-index: 1; left: 293px; top: 240px; position: absolute; width: 189px" TabIndex="4"></asp:TextBox>
         <asp:TextBox ID="beneficiario" runat="server" Enabled="False" style="z-index: 1; left: 296px; top: 289px; position: absolute; width: 187px" TabIndex="5"></asp:TextBox>
         <asp:DropDownList ID="sexo" runat="server" style="z-index: 1; left: 298px; top: 197px; position: absolute" TabIndex="3">
