@@ -28,7 +28,7 @@ namespace Prueba_Mierda_ASP
 
         protected void Button_Beneficiarios_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/WebForM_Beneficiarios.aspx");       
+            Response.Redirect("~/profesores.aspx");       
         }
 
         protected void Button_Actividades_Click(object sender, EventArgs e)
@@ -39,11 +39,6 @@ namespace Prueba_Mierda_ASP
         protected void Button_Hijos_Click(object sender, EventArgs e)
         {
             Response.Redirect("hijos.aspx?");
-        }
-
-        protected void Button_Actividades_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

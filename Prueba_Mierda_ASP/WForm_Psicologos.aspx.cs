@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Oracle.ManagedDataAccess.Client;
 
 namespace Prueba_Mierda_ASP
 {
@@ -117,9 +118,9 @@ namespace Prueba_Mierda_ASP
                         return false;
                     }
                 }
-                if(!this.RadioButton1.Checked)
+                if(!this.radioButt_Female.Checked)
                 {
-                    if(!this.RadioButton2.Checked)
+                    if(!this.radioButt_Male.Checked)
                     {
                         ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "No mames", "alert('Seleccione el Sexo')", true);
                         return false;
@@ -168,16 +169,16 @@ namespace Prueba_Mierda_ASP
         {
             if (is_check)
             {
-                if (this.txt_Box_Working_Days.Text.Contains(str) == false)
-                    this.txt_Box_Working_Days.Text += str;
+                if (this.TextBox_DiasL.Text.Contains(str) == false)
+                    this.TextBox_DiasL.Text += str;
             }
             else
             {
-                if (this.txt_Box_Working_Days.Text.Contains(str) == true)
+                if (this.TextBox_DiasL.Text.Contains(str) == true)
                 {
-                    string str_1 = this.txt_Box_Working_Days.Text;
+                    string str_1 = this.TextBox_DiasL.Text;
                     str_1 = str_1.Replace(str, string.Empty);
-                    this.txt_Box_Working_Days.Text = str_1;
+                    this.TextBox_DiasL.Text = str_1;
                 }
             }
         }

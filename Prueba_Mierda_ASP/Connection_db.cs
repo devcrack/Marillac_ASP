@@ -1,4 +1,4 @@
-﻿using Oracle.DataAccess.Client;
+﻿using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -22,7 +22,7 @@ namespace Prueba_Mierda_ASP
         public Connection_db()
         {
             this.oracle_connect = new OracleConnection();
-            this.oracle_connect.ConnectionString = "Data Source = xe; User Id = MARILLAC_DEF; Password = oracle";
+            this.oracle_connect.ConnectionString = "Data Source = localhost; User Id = MARILLAC; Password = Mvaldes1";
         }
 
         /// <summary>
