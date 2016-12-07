@@ -37,7 +37,7 @@ namespace Prueba_Mierda_ASP
 
         protected void Button_Hijos_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/hijos.aspx?");
+            Response.Redirect("hijos.aspx?");
         }
     }
 }

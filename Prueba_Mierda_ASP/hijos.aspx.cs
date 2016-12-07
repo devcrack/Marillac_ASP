@@ -343,5 +343,10 @@ namespace Prueba_Mierda_ASP
 
 
         }
+
+        protected void boton_salir_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Menu.aspx");
+        }
     }
 }

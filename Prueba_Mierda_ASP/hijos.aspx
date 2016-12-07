@@ -32,10 +32,10 @@
         <asp:Button ID="boton_modificar" runat="server" OnClick="boton_modificar_Click" style="z-index: 1; left: 205px; top: 360px; position: absolute; height: 26px" Text="Modificar" />
         <asp:Button ID="boton_eliminar" runat="server" OnClick="boton_eliminar_Click" style="z-index: 1; left: 291px; top: 360px; position: absolute; width: 78px" Text="Eliminar" />
         <asp:Button ID="boton_limpiar" runat="server" OnClick="boton_limpiar_Click" style="z-index: 1; left: 122px; top: 402px; position: absolute; width: 73px" Text="Limpiar" />
-        <asp:Button ID="boton_salir" runat="server" style="z-index: 1; top: 400px; position: absolute; left: 207px; width: 75px" Text="Salir" />
+        <asp:Button ID="boton_salir" runat="server" style="z-index: 1; top: 400px; position: absolute; left: 207px; width: 75px" Text="Salir" OnClick="boton_salir_Click" />
         <asp:Button ID="Button6" runat="server" OnClick="Button6_Click1" style="z-index: 1; left: 499px; top: 285px; position: absolute" Text="..." />
         <asp:Label ID="Label1" runat="server" style="z-index: 1; left: 169px; top: 54px; position: absolute" Text="Apellido Paterno"></asp:Label>
-        <asp:Label ID="Label2" runat="server" style="z-index: 1; left: 99px; top: 241px; position: absolute" Text="Fecha Nacimiento(dd-mm-aa)"></asp:Label>
+        <asp:Label ID="Label2" runat="server" style="z-index: 1; left: 99px; top: 241px; position: absolute" Text="Fecha Nacimiento(mm-dd-aa)"></asp:Label>
         <asp:Label ID="Label3" runat="server" style="z-index: 1; left: 758px; top: 51px; position: absolute" Text="Hijos"></asp:Label>
         <asp:Label ID="Label4" runat="server" style="z-index: 1; left: 168px; top: 101px; position: absolute" Text="Apellido Materno"></asp:Label>
         <asp:Label ID="Label5" runat="server" style="z-index: 1; left: 205px; top: 293px; position: absolute" Text="Beneficiario"></asp:Label>
