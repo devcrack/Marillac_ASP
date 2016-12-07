@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Oracle.ManagedDataAccess.Client;
+//using Oracle.DataAccess.Client;
 using System.Data;
 
 namespace Prueba_Mierda_ASP
@@ -129,7 +130,9 @@ namespace Prueba_Mierda_ASP
                 con.Open();
                 dias = checaDias();
 
-                cmd = "INSERT INTO ACTIVIDAD (IDPROFESOR, NOMBREACTIVIDAD, CUPO, DIASIMPARTE, HORAINICIO, HORAFINAL, INSCRITOS) VALUES (" + Convert.ToInt16(TextBox6.Text) + " , '" + TextBox1.Text + "', " + Convert.ToInt16(TextBox4.Text) + ", '" + dias + "', " + Convert.ToInt16(TextBox2.Text) + ", " + Convert.ToInt16(TextBox3.Text) + ", " + 0 + ")";
+                if (TextBox6.Text == "&nbsp;")
+                    TextBox6.Text = "NULL";
+                cmd = "INSERT INTO ACTIVIDAD (IDPROFESOR, NOMBREACTIVIDAD, CUPO, DIASIMPARTE, HORAINICIO, HORAFINAL, INSCRITOS) VALUES ('" +TextBox6.Text + "' , '" + TextBox1.Text + "', " + TextBox4.Text + ", '" + dias + "', " +TextBox2.Text+ ", " + TextBox3.Text + ", " + 0 + ")";
                 query = new OracleCommand(cmd, con);
 
                 try
@@ -361,7 +364,9 @@ namespace Prueba_Mierda_ASP
                 con.Open();
                 dias = checaDias();
 
-                cmd = "UPDATE ACTIVIDAD SET IDPROFESOR = " + Convert.ToInt16(TextBox6.Text) + ", NOMBREACTIVIDAD = '" + TextBox1.Text + "', CUPO = " + Convert.ToInt16(TextBox4.Text) + ", DIASIMPARTE = '" + dias + "', HORAINICIO = " + Convert.ToInt16(TextBox2.Text) + ", HORAFINAL = " + Convert.ToInt16(TextBox3.Text) + " WHERE IDACTIVIDAD = " + exxx;
+                if (TextBox6.Text == "&nbsp;")
+                    TextBox6.Text = "NULL";
+                cmd = "UPDATE ACTIVIDAD SET IDPROFESOR = " + TextBox6.Text + ", NOMBREACTIVIDAD = '" + TextBox1.Text + "', CUPO = " + TextBox4.Text + ", DIASIMPARTE = '" + dias + "', HORAINICIO = " + TextBox2.Text + ", HORAFINAL = " + TextBox3.Text + " WHERE IDACTIVIDAD = " + exxx;
                 //IDPROFESOR,                                                                        NOMBREACTIVIDAD,                       CUPO,                                       DIASIMPARTE,                    HORAINICIO, HORAFINAL
                 query = new OracleCommand(cmd, con);
 
@@ -483,6 +488,11 @@ namespace Prueba_Mierda_ASP
         protected void Button6_Click(object sender, EventArgs e)
         {
             Response.Redirect("altaBeneficiarioActividad.aspx?parametro=" + TextBox7.Text);
+        }
+
+        protected void Button8_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("altaHijoActividad.aspx?parametro=" + TextBox7.Text);
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Oracle.ManagedDataAccess.Client;
+//using Oracle.DataAccess.Client;
 using System.Data;
 
 namespace Prueba_Mierda_ASP
