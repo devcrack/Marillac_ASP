@@ -262,7 +262,7 @@ namespace Prueba_Mierda_ASP
                 string query =
                     "INSERT INTO PSICOLOGO (NOMBRE, PATERNO, MATERNO, DIRECCION,"
                     +
-                    "COLONIA, TELEFONO, SEXO, LIMITEPACIENTES,FECHANACIMIENTO, DIASLABORALES) VALUES ("
+                    "COLONIA, TELEFONO, SEXO, LIMITEPACIENTES,FECHANACIMIENTO, DIASLABORALES, PACIENTESINSCRITOS) VALUES ("
                     +
                     "'" + this.TextBox_Nombre.Text + "',"
                     +
@@ -282,7 +282,7 @@ namespace Prueba_Mierda_ASP
                     +
                     "'" + this.TextBox_Fech_Nac.Text + "',"
                     +
-                    "'" + this.TextBox_DiasL.Text + "')";
+                    "'" + this.TextBox_DiasL.Text + "', 0)";
 
                 this.connection.alter_data_CUSTOM_query(query);
                 this.clear();
@@ -390,7 +390,7 @@ namespace Prueba_Mierda_ASP
 
         protected void Button_Limpiar_Click(object sender, EventArgs e)
         {
-
+            this.clear();
         }
 
         protected void Button_Salir_Click(object sender, EventArgs e)
