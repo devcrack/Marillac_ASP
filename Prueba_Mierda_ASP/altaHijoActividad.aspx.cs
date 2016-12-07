@@ -12,7 +12,7 @@ namespace Prueba_Mierda_ASP
     public partial class altaHijoActividad : System.Web.UI.Page
     {
 
-        string stringConnection = "Data Source = localhost; User Id = MARILLAC; Password = Mvaldes1";
+        string stringConnection = "Data Source = xe; User Id = MARILLAC_DEF; Password = oracle";
         int id;
         int altaB;
 

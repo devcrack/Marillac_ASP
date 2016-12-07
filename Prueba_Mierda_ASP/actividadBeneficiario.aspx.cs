@@ -12,7 +12,7 @@ namespace Prueba_Mierda_ASP
     public partial class actividadBeneficiario : System.Web.UI.Page
     {
 
-        string sConection = "Data Source=localhost; User Id=MARILLAC; Password=Mvaldes1";
+        string sConection = "Data Source=xe; User Id=MARILLAC_DEF; Password=oracle";
         private int idBeneficiario;
 
         protected void Page_Load(object sender, EventArgs e)
