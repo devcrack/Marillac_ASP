@@ -30,7 +30,6 @@ namespace Prueba_Mierda_ASP
         public DataSet conDatos(String consulta)
         {
 
-
             OracleConnection m = new OracleConnection();
             m.ConnectionString = stringConnection;
             m.Open();
@@ -140,9 +139,9 @@ namespace Prueba_Mierda_ASP
 
 
             idbene = "";
-            nombre.Text = "";
             paterno.Text = "";
             materno.Text = "";
+            nombre.Text = "";
             beneficiario.Text = "";
             fecha.Text = "";
             sexo.ClearSelection();
@@ -158,32 +157,32 @@ namespace Prueba_Mierda_ASP
             GridViewRow row = hijostabla.SelectedRow;
             
             hijostabla.SelectedRowStyle.BackColor = System.Drawing.Color.Coral;
-            nombre.Text = row.Cells[3].Text;
+            paterno.Text = row.Cells[3].Text;
            
-            paterno.Text= row.Cells[4].Text;
-            materno.Text = row.Cells[5].Text;
+            materno.Text= row.Cells[4].Text;
+            nombre.Text = row.Cells[5].Text;
             sexo.Text = row.Cells[6].Text;
             fecha.Text = row.Cells[7].Text;
             fecha.Text = fecha.Text.Substring(0, 10);
             idbene = row.Cells[1].Text;
             TextBox1.Text = idbene;
             idbene = TextBox1.Text;
-            //beneficiario.Text = textoben(row.Cells[1].Text);
+            beneficiario.Text = textoben(row.Cells[1].Text);
 
             actividadestabla.SelectedIndex = -1;
             actividaddatos(row.Cells[0].Text);
-        
-
-
        }
 
 
         public string textoben(string text)
         {
-            string cad = "SELECT paterno,materno,nombre  From BENEFICIARIO where idBeneficiario =" + text;
+            if(text!= "&nbsp;")
+            {
+                string cad = "SELECT paterno,materno,nombre  From BENEFICIARIO where idBeneficiario =" + text;
 
-            return conDatos(cad).Tables[0].Rows[0].ItemArray[0].ToString() + " " + conDatos(cad).Tables[0].Rows[0].ItemArray[1].ToString() + " " + conDatos(cad).Tables[0].Rows[0].ItemArray[2].ToString();
-            
+                return conDatos(cad).Tables[0].Rows[0].ItemArray[0].ToString() + " " + conDatos(cad).Tables[0].Rows[0].ItemArray[1].ToString() + " " + conDatos(cad).Tables[0].Rows[0].ItemArray[2].ToString();
+            }
+            return "";
         }
 
         protected void hijostabla_PreRender(object sender, EventArgs e)
@@ -200,9 +199,9 @@ namespace Prueba_Mierda_ASP
 
         public void agregar()
         {
-            if (nombre.Text != "" && paterno.Text != "" && materno.Text != "" && sexo.Text != "" && fecha.Text != "" && TextBox1.Text != "")
+            if (paterno.Text != "" && materno.Text != "" && nombre.Text != "" && sexo.Text != "" && fecha.Text != "" && TextBox1.Text != "")
             {
-                string query = "INSERT INTO HIJO (NOMBRE, PATERNO,MATERNO,SEXO, FECHANACIMIENTO ,IDBENEFICIARIO) VALUES('" + nombre.Text + "', '" + paterno.Text + "', '" + materno.Text + "', '" + sexo.Text + "', '" + fecha.Text + "', '" + TextBox1.Text + "')";
+                string query = "INSERT INTO HIJO (NOMBRE, PATERNO,MATERNO,SEXO, FECHANACIMIENTO ,IDBENEFICIARIO) VALUES('" + paterno.Text + "', '" + materno.Text + "', '" + nombre.Text + "', '" + sexo.Text + "', '" + fecha.Text + "', '" + TextBox1.Text + "')";
                 con(query);
                 limpiartodo();
                 actDatos();
@@ -213,12 +212,12 @@ namespace Prueba_Mierda_ASP
         public void modificar()
         {
             //
-            if (nombre.Text != "" && paterno.Text != "" && materno.Text != "" && sexo.Text != "" && fecha.Text != "" && TextBox1.Text != "" && hijostabla.SelectedRow != null)
+            if (paterno.Text != "" && materno.Text != "" && nombre.Text != "" && sexo.Text != "" && fecha.Text != "" && TextBox1.Text != "" && hijostabla.SelectedRow != null)
                 
             {
                 
                 String idModificar = hijostabla.Rows[hijostabla.SelectedIndex].Cells[0].Text;
-                string query = "UPDATE HIJO SET nombre='" + nombre.Text + "',IDBENEFICIARIO='" + TextBox1.Text + "', PATERNO='" + paterno.Text + "', MATERNO='" + materno.Text + "', SEXO='" + sexo.Text + "', FECHANACIMIENTO='" + fecha.Text +"' WHERE idHIJO=" + idModificar;
+                string query = "UPDATE HIJO SET nombre='" + paterno.Text + "',IDBENEFICIARIO='" + TextBox1.Text + "', PATERNO='" + materno.Text + "', MATERNO='" + nombre.Text + "', SEXO='" + sexo.Text + "', FECHANACIMIENTO='" + fecha.Text +"' WHERE idHIJO=" + idModificar;
                 con(query);
                 limpiartodo();
                 actDatos();
@@ -246,7 +245,7 @@ namespace Prueba_Mierda_ASP
         public void eliminar()
         {
             string chey = "";
-            if (nombre.Text != "" && paterno.Text != "" && materno.Text != "" && sexo.Text != "" && fecha.Text != "" && TextBox1.Text != "" && hijostabla.SelectedRow != null)
+            if (paterno.Text != "" && materno.Text != "" && nombre.Text != "" && sexo.Text != "" && fecha.Text != "" && TextBox1.Text != "" && hijostabla.SelectedRow != null)
             {
 
                 String idEliminar = hijostabla.Rows[hijostabla.SelectedIndex].Cells[0].Text;
@@ -310,30 +309,20 @@ namespace Prueba_Mierda_ASP
 
         protected void beneficiariostabla_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
         {
-            GridViewRow row = hijostabla.Rows[e.NewSelectedIndex];
+            //GridViewRow row = hijostabla.Rows[e.NewSelectedIndex];
         }
 
 
         public void actividaddatos(string idhijo1)
         {
-
-            /*  string cad = "Select act.IDACTIVIDAD,act.NOMBREACTIVIDAD," +
-              ",act.INSCRITOS,CONCAT(prof.NOMBRE, ' ', prof.PATERNO) as PROFESOR,inhijo.SALDO From ACTIVIDAD as act " +
-              "inner join INSCRIPCIONHIJO as inhijo on inhijo.IDACTIVIDAD = act.IDACTIVIDAD " +
-              "inner join PROFESOR as prof on act.IDPROFESOR = prof.IDPROFESOR where inhijo.IDHIJO =" + idhijo1;
-
-              actividadestabla.DataSource = conDatos(cad);
-              actividadestabla.DataBind();*/
-
-           string cad = "Select act.NOMBREACTIVIDAD " +
-           "From ACTIVIDAD  act " +
-           "inner join INSCRIPCIONHIJO  inhijo on inhijo.IDACTIVIDAD = act.IDACTIVIDAD " +
-           "inner join PROFESOR  prof on act.IDPROFESOR = prof.IDPROFESOR where inhijo.IDHIJO =" + idhijo1;
+            /*string cad = "SELECT a.nombreActividad FROM actividad a " +
+            "INNER JOIN inscripcionHijo i on" +
+            "i.idActividad=a.idActividad" +
+            "INNER JOIN hijo h on" +
+            "h.idhijo=i.idHijo and h.idHijo=" + idhijo1;
 
             actividadestabla.DataSource = conDatos(cad);
-            actividadestabla.DataBind(); 
-
-
+            actividadestabla.DataBind();   */
         }
 
         protected void boton_salir_Click(object sender, EventArgs e)

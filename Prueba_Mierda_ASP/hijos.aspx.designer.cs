@@ -31,13 +31,13 @@ namespace Prueba_Mierda_ASP {
         protected global::System.Web.UI.WebControls.GridView hijostabla;
         
         /// <summary>
-        /// Control nombre.
+        /// Control paterno.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nombre;
+        protected global::System.Web.UI.WebControls.TextBox paterno;
         
         /// <summary>
         /// Control boton_agregar.
@@ -49,15 +49,6 @@ namespace Prueba_Mierda_ASP {
         protected global::System.Web.UI.WebControls.Button boton_agregar;
         
         /// <summary>
-        /// Control paterno.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox paterno;
-        
-        /// <summary>
         /// Control materno.
         /// </summary>
         /// <remarks>
@@ -65,6 +56,15 @@ namespace Prueba_Mierda_ASP {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox materno;
+        
+        /// <summary>
+        /// Control nombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox nombre;
         
         /// <summary>
         /// Control fecha.
