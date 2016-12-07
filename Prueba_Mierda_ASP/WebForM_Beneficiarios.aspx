@@ -191,29 +191,25 @@
             right: 906px;
             margin-top: 0px;
         }
-        .auto-style26 {
-            z-index: 1;
-            left: 59px;
-            top: 437px;
-            position: absolute;
-            right: 1126px;
-        }
         .auto-style27 {
             z-index: 1;
-            left: 171px;
-            top: 437px;
+            left: 60px;
+            top: 438px;
             position: absolute;
             margin-top: 0px;
             height: 25px;
+            right: 1125px;
         }
         .auto-style28 {
             z-index: 1;
-            left: 279px;
+            left: 173px;
             top: 437px;
             position: absolute;
             right: 906px;
-            width: 100px;
+            width: 206px;
             margin-top: 0px;
+            height: 25px;
+            bottom: 78px;
         }
         .auto-style29 {
             z-index: 1;
@@ -246,12 +242,11 @@
             <asp:CheckBox ID="masculino" runat="server" Checked="True" CssClass="auto-style17" OnCheckedChanged="masculino_CheckedChanged" TabIndex="7" Text="Masculino" AutoPostBack="True" />
             <asp:CheckBox ID="femenino" runat="server" CssClass="auto-style18" OnCheckedChanged="femenino_CheckedChanged" TabIndex="8" Text="Femenino" AutoPostBack="True" />
             <asp:TextBox ID="telefono" runat="server" style="margin-top: 0px" CssClass="auto-style16" TabIndex="6"></asp:TextBox>
-            <asp:Button ID="pagos" runat="server" CssClass="auto-style26" Text="Pagos" Width="100px" />
-            <asp:Button ID="salir" runat="server" CssClass="auto-style28" OnClick="salir_Click" Text="Salir" Height="22px" Width="100px" />
+            <asp:Button ID="salir" runat="server" CssClass="auto-style28" OnClick="salir_Click" Text="Salir" />
             <asp:Button ID="actividades" runat="server" CssClass="auto-style27" Text="Actividades" Width="100px" />
             <asp:Button ID="alta" runat="server" CssClass="auto-style20" OnClick="alta_Click" Text="Alta" Width="100px" />
-            <asp:Button ID="baja" runat="server" CssClass="auto-style21" Text="Baja" Width="100px" />
-            <asp:Button ID="modificar" runat="server" CssClass="auto-style22" Text="Modificar" Width="100px" />
+            <asp:Button ID="baja" runat="server" CssClass="auto-style21" Text="Baja" Width="100px" OnClick="baja_Click" />
+            <asp:Button ID="modificar" runat="server" CssClass="auto-style22" Text="Modificar" Width="100px" OnClick="modificar_Click" />
             <asp:Button ID="hijos" runat="server" CssClass="auto-style23" Text="Hijos" Width="100px" />
             <asp:Button ID="psicologo" runat="server" CssClass="auto-style24" Text="Psicólogo" Width="100px" Height="22px" />
             <asp:Button ID="limpiar" runat="server" CssClass="auto-style25" OnClick="limpiar_Click" Text="Limpiar campos" Width="100px" Height="22px" />

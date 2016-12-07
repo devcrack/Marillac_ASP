@@ -178,5 +178,64 @@ namespace Prueba_Mierda_ASP
             }
 
         }
+
+        protected void baja_Click(object sender, EventArgs e)
+        {
+            //Eliminar
+            int index = GridView1.SelectedIndex;
+            int idBeneficiario = int.Parse(GridView1.Rows[index].Cells[1].Text);
+
+            try
+            {
+                OracleConnection m = new OracleConnection();
+                OracleCommand cmd;
+                string query;
+                m.ConnectionString = sConection;
+                m.Open();
+                query = "DELETE FROM beneficiario WHERE idBeneficiario=" + idBeneficiario;
+                cmd = new OracleCommand(query, m);
+                cmd.ExecuteNonQuery();
+                cargarDatos();
+                limpiarDatos();
+            }
+            catch (Exception ex) { Page.ClientScript.RegisterStartupScript(this.GetType(), "alert" + UniqueID, "alert('" + ex + "');", true); }
+        }
+
+        protected void modificar_Click(object sender, EventArgs e)
+        {
+            if (nombre.Text != "" && paterno.Text != "" && materno.Text != "" && direccion.Text != "" && colonia.Text != "" && telefono.Text != "" && fechaNacimiento.Text != "")
+            {
+                int index = GridView1.SelectedIndex;
+                int idBeneficiario = int.Parse(GridView1.Rows[index].Cells[1].Text);
+
+                try
+                {
+                    OracleConnection m = new OracleConnection();
+                    OracleCommand cmd;
+                    string query;
+                    m.ConnectionString = sConection;
+                    m.Open();
+                    string sexo;
+                    if (masculino.Checked == true)
+                        sexo = "M";
+                    else
+                        sexo = "F";
+                    query = "UPDATE beneficiario SET " +
+                    "nombre='" + nombre.Text + "', paterno='" + paterno.Text + "', materno='" + materno.Text + "', direccion='" + direccion.Text + "', colonia='" + colonia.Text + "', telefono=" + telefono.Text + ", sexo='" + sexo + "', fechaNacimiento='"+fechaNacimiento.Text+"' "+
+
+                    "WHERE idBeneficiario=" + idBeneficiario;
+                    cmd = new OracleCommand(query, m);
+                    cmd.ExecuteNonQuery();
+                    cargarDatos();
+                    limpiarDatos();
+                }
+                catch (Exception ex) { Page.ClientScript.RegisterStartupScript(this.GetType(), "alert" + UniqueID, "alert('" + ex + "');", true); }
+            }
+            else
+                {
+                    string script = "alert(\"No se pueden dejar campos vacíos.\");";
+                    ScriptManager.RegisterStartupScript(this, GetType(), "ServerControlScript", script, true);
+                }
+        }
     }
 }
