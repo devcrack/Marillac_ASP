@@ -76,9 +76,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
-      <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.24160719\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Oracle.DataAccess, Version=4.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\oraclexe\app\oracle\product\11.2.0\server\odp.net\bin\4\Oracle.DataAccess.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -99,14 +99,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Actividad.aspx" />
-    <Content Include="actividadBeneficiario.aspx" />
     <Content Include="Actividades.aspx" />
-    <Content Include="altaBeneficiarioActividad.aspx" />
-    <Content Include="hijos.aspx" />
     <Content Include="Menu.aspx" />
     <Content Include="packages.config" />
-    <Content Include="psicologoBeneficiario.aspx" />
     <Content Include="WebForM_Beneficiarios.aspx" />
+    <Content Include="WebForm_Pacientes.aspx" />
     <Content Include="WForm_Psicologos.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -128,13 +125,6 @@
     <Compile Include="Actividad.aspx.designer.cs">
       <DependentUpon>Actividad.aspx</DependentUpon>
     </Compile>
-    <Compile Include="actividadBeneficiario.aspx.cs">
-      <DependentUpon>actividadBeneficiario.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="actividadBeneficiario.aspx.designer.cs">
-      <DependentUpon>actividadBeneficiario.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Actividades.aspx.cs">
       <DependentUpon>Actividades.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -142,20 +132,7 @@
     <Compile Include="Actividades.aspx.designer.cs">
       <DependentUpon>Actividades.aspx</DependentUpon>
     </Compile>
-    <Compile Include="altaBeneficiarioActividad.aspx.cs">
-      <DependentUpon>altaBeneficiarioActividad.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="altaBeneficiarioActividad.aspx.designer.cs">
-      <DependentUpon>altaBeneficiarioActividad.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="hijos.aspx.cs">
-      <DependentUpon>hijos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hijos.aspx.designer.cs">
-      <DependentUpon>hijos.aspx</DependentUpon>
-    </Compile>
+    <Compile Include="Connection_db.cs" />
     <Compile Include="Menu.aspx.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -164,19 +141,19 @@
       <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="psicologoBeneficiario.aspx.cs">
-      <DependentUpon>psicologoBeneficiario.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="psicologoBeneficiario.aspx.designer.cs">
-      <DependentUpon>psicologoBeneficiario.aspx</DependentUpon>
-    </Compile>
     <Compile Include="WebForM_Beneficiarios.aspx.cs">
       <DependentUpon>WebForM_Beneficiarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="WebForM_Beneficiarios.aspx.designer.cs">
       <DependentUpon>WebForM_Beneficiarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm_Pacientes.aspx.cs">
+      <DependentUpon>WebForm_Pacientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm_Pacientes.aspx.designer.cs">
+      <DependentUpon>WebForm_Pacientes.aspx</DependentUpon>
     </Compile>
     <Compile Include="WForm_Psicologos.aspx.cs">
       <DependentUpon>WForm_Psicologos.aspx</DependentUpon>

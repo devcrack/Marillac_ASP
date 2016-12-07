@@ -16,7 +16,17 @@
     font-size:x-large;
 }
 
+.data_grids
+{
+    overflow:scroll;
 
+}
+
+.fix_header
+{
+    //position:absolute;
+    font-weight:bold;
+}
 .buttons
 {
     /*border:none;*/

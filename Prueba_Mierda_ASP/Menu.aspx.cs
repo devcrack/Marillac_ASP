@@ -22,6 +22,7 @@ namespace Prueba_Mierda_ASP
 
         protected void Button_psicologos_Click(object sender, EventArgs e)
         {
+            //Response.Redirect("~/WForm_Psicologos.aspx?param1=" + this.TextBox_1.Text + "&param2=" + this.TextBox_2.Text);  
             Response.Redirect("~/WForm_Psicologos.aspx");
         }
 
@@ -37,7 +38,12 @@ namespace Prueba_Mierda_ASP
 
         protected void Button_Hijos_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/hijos.aspx");
+            Response.Redirect("hijos.aspx?");
+        }
+
+        protected void Button_Actividades_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
